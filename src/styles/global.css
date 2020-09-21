@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Latto';
+  src: local('Latto'), url(../assets/fonts/Lato.ttf) format('woff2');
+}
+
+:root {
+  --background: #ffffff;
+  --text: #7f8fa4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  color: #4e4c55;
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: Latto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
