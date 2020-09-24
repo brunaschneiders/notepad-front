@@ -1,7 +1,8 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { Container, Label, TextArea } from './styles';
 
-function TextAreaInput({ label, ...props }) {
+export default function TextAreaInput({ label, ...props }) {
   return (
     <Container>
       <Label>{label}</Label>
@@ -10,4 +11,10 @@ function TextAreaInput({ label, ...props }) {
   );
 }
 
-export default TextAreaInput;
+TextAreaInput.propTypes = {
+  label: propTypes.string,
+};
+
+TextAreaInput.defaultProps = {
+  label: '',
+};

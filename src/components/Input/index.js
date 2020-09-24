@@ -1,7 +1,8 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { Container, Label, Control } from './styles';
 
-function Input({ label, ...props }) {
+export default function Input({ label, ...props }) {
   return (
     <Container>
       <Label>{label}</Label>
@@ -10,4 +11,10 @@ function Input({ label, ...props }) {
   );
 }
 
-export default Input;
+Input.propTypes = {
+  label: propTypes.oneOfType([propTypes.string, propTypes.number]),
+};
+
+Input.defaultProps = {
+  label: '',
+};
